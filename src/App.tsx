@@ -1,6 +1,6 @@
-import { useState, useEffect, type FormEvent } from 'react';
+import { useEffect, useState, type FormEvent } from 'react';
 import './App.css';
-import type { Photo, PexelsResponse } from './types';
+import type { PexelsResponse, Photo } from './types';
 
 function App() {
   const [query, setQuery] = useState<string>('nature');
@@ -9,7 +9,7 @@ function App() {
   const [error, setError] = useState<string | null>(null);
   const [inputSearch, setInputSearch] = useState<string>('');
 
-  const PEXELS_API_KEY: string = 'TU_CLAVE_PEXELS';
+  const PEXELS_API_KEY: string = 'x5ISS1qZw2zLsR9dDN17lA5FTyZT4bFWEbYoceBXvYrBKldJFDpeJpHG';
 
   useEffect(() => {
     fetchPhotos(query);
